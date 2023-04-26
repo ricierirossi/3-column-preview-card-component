@@ -1,0 +1,134 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* height: 100%; pq se por isso ele não pega o body todo?*/
+    background-color: var(--very-light-gray);
+    padding: 50px 20px;
+}
+
+.cards {
+    max-width: 335px;
+}
+
+.sedans {
+    background-color: var(--bright-orange);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 45px;
+}
+
+.suvs { 
+    background-color: var(--dark-cyan);
+    padding: 45px;
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 45px;
+}
+
+img {
+    margin-bottom: 30px;
+    
+}            
+
+.type-sedans,
+.type-suvs,
+.type-luxury {
+    font-family: 'Big Shoulders Display', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: var(--very-light-gray)                
+}
+
+.text-sedans,
+.text-suvs,
+.text-luxury {
+    font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: var(--transparent-white);
+    margin: 30px 8px 30px 0px;   
+    text-align: left;
+    line-height: 24px;
+}
+
+.button {
+    font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 15px 32px;
+    border-radius: 45px;
+    display: inline-block;
+}
+
+.highlight {
+    background-color: var(--very-light-gray);
+}
+
+.button-color-sedans {
+    color: var(--bright-orange) ;
+}
+
+.button-color-suvs {
+    color: var(--dark-cyan) ;
+}
+
+.button-color-luxury {
+    color: var(--very-dark-cyan) ;
+}
+
+@media (min-width: 769px) {      
+
+    .sedans {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        max-width: 335px;
+        display: inline-block;
+    }
+    
+    .suvs{
+        max-width: 335px;
+        display: inline-block;
+    }
+
+    .luxury {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        max-width: 335px;
+        display: inline-block;
+    }
+
+    .container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--very-light-gray);
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        min-width: 100%;
+        align-self: center;
+    }
+    
+}
